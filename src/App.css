@@ -1,0 +1,145 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+}
+
+.container {
+  max-width: 400px; /* Adjusted for a more narrow layout */
+  width: 400px;
+  margin: 0;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 100vh; /* Full height */
+  overflow-y: auto; /* Enable scrolling for long lists */
+  display: flex;
+  flex-direction: column;
+}
+
+.queue-controls {
+  display: flex; /* Use flex layout for the buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap to next line if needed */
+  justify-content: flex-start; /* Align buttons to the start of the container */
+  gap: 2px; /* Ensure there's space between buttons even when they wrap */
+  margin-bottom: 20px;
+}
+
+input[type="text"], button {
+  font-size: 14px; /* Smaller font size for compactness */
+}
+
+input[type="text"] {
+  width: 65%; /* Adjust based on your layout */
+  padding: 6px 10px; /* Comfortable padding */
+  margin: 8px 0; /* Spacing around the text box */
+  margin-right: 10px;
+  display: inline-block; /* Allows for better control of styling */
+  border: 1px solid #ccc; /* Subtle border */
+  border-radius: 4px; /* Rounded corners */
+  box-sizing: border-box; /* Ensures padding does not affect the overall width */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  transition: border 0.3s ease; /* Smooth transition for focus */
+}
+
+input[type="text"]:focus {
+  outline: none; /* Removes the default focus outline */
+  border-color: #4CAF50; /* Highlight color when focused */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* More pronounced shadow on focus */
+}
+
+button {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 6px 8px; /* Generous padding for a larger click area */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 14px; /* Slightly larger font size */
+  cursor: pointer; /* Change mouse cursor to indicate interactiveness */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: background-color 0.3s, box-shadow 0.2s, transform 0.2s; /* Smooth transitions for feedback */
+  margin: 9px 0px;
+}
+
+button:hover {
+  background-color: #45a049; /* Slightly lighter green when hovered */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Larger shadow for hovered state */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+button:active {
+  background-color: #3e8e41; /* Slightly darker green for pressed state */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reset shadow to default */
+  transform: translateY(0); /* Remove lift effect */
+}
+
+.primary-button {
+  background-color: #8BC34A; /* Green for primary */
+}
+
+.primary-button:hover {
+  background-color: #7CB342;
+}
+
+.primary-button:active {
+  background-color: #689F38;
+}
+
+.secondary-button {
+  background-color: #03A9F4; /* Yellow for secondary */
+}
+
+.secondary-button:hover {
+  background-color: #039BE5;
+}
+
+.secondary-button:active {
+  background-color: #0288D1;
+}
+
+h2, h3 {
+  font-size: 18px; /* Smaller headings */
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Additional styling for compactness */
+.queue-list {
+  margin-bottom: 10px;
+}
+
+.queue-list-ul {
+  min-height: 100px; /* Adjust the value as needed */
+  border-radius: 5px; /* Match other styling */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.queue-list-ul li {
+  font-size: 18px; /* Smaller text */
+  padding-left: 10px; /* Adjust this value as needed */
+  margin-top: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 3px;
+  border-radius: 5px;
+  list-style-position: inside; /* Ensures the bullet points are included in the padding area */
+  border: 1px solid transparent
+}
+
+.queue-list-ul li:hover {
+  cursor: grab;
+  border-color: #ccc;
+  background-color: #f9f9f9;
+}
+
+.queue-list-ul li.dragging {
+  border-color: #ccc;
+  background-color: #f9f9f9;
+  cursor: grabbing;
+}
